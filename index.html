@@ -1,29 +1,380 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>TheRealTechInnovator</title>
-  <style>
-    body {
-      background: #101010;
-      color: gold;
-      font-family: Arial, sans-serif;
-      text-align: center;
-      padding: 60px 20px;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="TheRealTechInnovator - exploring technology, programming, cybersecurity and innovation.">
+<title>TheRealTechInnovator | Technology & Innovation</title>
 
-    button {
-      padding: 12px 20px;
-      cursor: pointer;
-    }
-  </style>
+<style>
+:root {
+  --gold: #f5c542;
+  --black: #0b0b0f;
+  --panel: #17171e;
+  --white: #f5f5f5;
+  --muted: #b6b6c3;
+}
+* { box-sizing: border-box; scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--black);
+  color: var(--white);
+  font-family: Arial, sans-serif;
+  line-height: 1.7;
+}
+header {
+  background: #111116;
+  border-bottom: 1px solid #39312a;
+  padding: 16px 7%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.logo { color: var(--gold); font-size: 21px; font-weight: bold; }
+nav { display: flex; flex-wrap: wrap; gap: 15px; }
+nav a { color: white; text-decoration: none; font-size: 14px; }
+nav a:hover { color: var(--gold); }
+.hero {
+  min-height: 490px;
+  padding: 90px 8%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  background: radial-gradient(ellipse at top right, #44350e 0%, #17141a 35%, #0b0b0f 75%);
+}
+.tag {
+  color: var(--gold);
+  letter-spacing: 3px;
+  font-size: 12px;
+  font-weight: bold;
+}
+h1 { font-size: clamp(38px, 7vw, 68px); line-height: 1.1; margin: 18px 0; }
+h1 span, h2 span { color: var(--gold); }
+.hero p { color: var(--muted); max-width: 650px; font-size: 18px; }
+.buttons { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 18px; }
+.btn {
+  display: inline-block;
+  padding: 12px 19px;
+  border: 1px solid var(--gold);
+  border-radius: 7px;
+  color: var(--black);
+  background: var(--gold);
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: none;
+}
+.btn.secondary { background: transparent; color: var(--gold); }
+section { padding: 65px 8%; }
+.section-title { font-size: 30px; margin: 0 0 10px; }
+.intro { color: var(--muted); max-width: 760px; margin-bottom: 28px; }
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 18px;
+}
+.card {
+  background: var(--panel);
+  border: 1px solid #30303a;
+  border-radius: 12px;
+  padding: 23px;
+}
+.card h3 { color: var(--gold); margin-top: 7px; }
+.card p { color: var(--muted); }
+.symbol { font-size: 30px; }
+.alt { background: #111116; }
+ul { color: var(--muted); padding-left: 22px; }
+li { margin: 8px 0; }
+.highlight {
+  border-left: 3px solid var(--gold);
+  padding: 15px 20px;
+  background: #181710;
+  color: var(--muted);
+  margin-top: 24px;
+}
+input, textarea {
+  width: 100%;
+  margin: 7px 0 15px;
+  padding: 13px;
+  background: #101016;
+  color: white;
+  border: 1px solid #41414c;
+  border-radius: 6px;
+  font: inherit;
+}
+label { display: block; color: var(--muted); }
+#form-message { color: var(--gold); }
+footer {
+  text-align: center;
+  padding: 30px 7%;
+  border-top: 1px solid #30303a;
+  color: var(--muted);
+}
+footer strong { color: var(--gold); }
+</style>
 </head>
+
 <body>
-  <h1>TheRealTechInnovator</h1>
-  <p>Welcome to my personal website!</p>
-  <button onclick="alert('Welcome, Tech Innovator!')">
-    Click Me
-  </button>
+<header>
+  <div class="logo">⚡ TheRealTechInnovator</div>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#skills">Interests</a>
+    <a href="#projects">Projects</a>
+    <a href="#learn">Learn</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<main>
+<section class="hero" id="home">
+  <div class="tag">TECHNOLOGY • CREATIVITY • INNOVATION</div>
+  <h1>Welcome to<br><span>TheRealTechInnovator</span></h1>
+  <p>
+    Think creatively. Code intelligently. Innovate responsibly.
+    This is my personal space for exploring technology, developing
+    programming skills, learning cybersecurity and turning ideas into reality.
+  </p>
+  <div class="buttons">
+    <a class="btn" href="#about">Discover My World ↓</a>
+    <a class="btn secondary" href="#projects">Explore Projects</a>
+  </div>
+</section>
+
+<section id="about">
+  <div class="tag">MY JOURNEY</div>
+  <h2 class="section-title">About <span>The Innovator</span></h2>
+  <p class="intro">
+    Welcome to my digital space! TheRealTechInnovator represents curiosity,
+    continuous learning, problem-solving and the desire to understand how
+    technology works. I believe every great innovation begins with a question
+    and grows through practice, patience and creativity.
+  </p>
+  <div class="grid">
+    <article class="card">
+      <div class="symbol">🎯</div>
+      <h3>My Mission</h3>
+      <p>Learn new technologies, develop practical solutions and use technical
+      knowledge to solve meaningful problems.</p>
+    </article>
+    <article class="card">
+      <div class="symbol">💡</div>
+      <h3>My Mindset</h3>
+      <p>Stay curious, experiment responsibly, learn from mistakes and improve
+      one project at a time.</p>
+    </article>
+    <article class="card">
+      <div class="symbol">🚀</div>
+      <h3>My Vision</h3>
+      <p>Build useful digital projects, strengthen my technical skills and
+      contribute positively to the world of technology.</p>
+    </article>
+  </div>
+</section>
+
+<section class="alt" id="skills">
+  <div class="tag">AREAS OF INTEREST</div>
+  <h2 class="section-title">Explore the <span>Tech World</span></h2>
+  <p class="intro">These are important areas I am interested in exploring
+  and developing through learning and practical projects.</p>
+  <div class="grid">
+    <article class="card">
+      <div class="symbol">💻</div>
+      <h3>Web Development</h3>
+      <p>Learn HTML for structure, CSS for design and JavaScript for
+      interactivity. Build websites that work on phones and computers.</p>
+    </article>
+    <article class="card">
+      <div class="symbol">🛡️</div>
+      <h3>Cybersecurity</h3>
+      <p>Understand online threats, account security, safe browsing,
+      encryption and responsible ways to protect digital systems.</p>
+    </article>
+    <article class="card">
+      <div class="symbol">🐍</div>
+      <h3>Programming</h3>
+      <p>Develop logical thinking, automate repetitive tasks and solve
+      problems using programming languages such as Python and JavaScript.</p>
+    </article>
+    <article class="card">
+      <div class="symbol">🤖</div>
+      <h3>Artificial Intelligence</h3>
+      <p>Explore how AI can support learning, creativity, data analysis
+      and problem-solving while considering privacy and responsible use.</p>
+    </article>
+    <article class="card">
+      <div class="symbol">🌐</div>
+      <h3>Networking</h3>
+      <p>Learn how computers communicate, how IP addresses work and how
+      networks connect people and services around the world.</p>
+    </article>
+    <article class="card">
+      <div class="symbol">🔐</div>
+      <h3>Data Protection</h3>
+      <p>Understand strong passwords, multi-factor authentication,
+      backups, encryption and the importance of keeping information private.</p>
+    </article>
+  </div>
+</section>
+
+<section id="projects">
+  <div class="tag">BUILD • TEST • IMPROVE</div>
+  <h2 class="section-title">My <span>Project Lab</span></h2>
+  <p class="intro">A space to showcase projects as they develop.
+  Replace these examples with your own completed work.</p>
+  <div class="grid">
+    <article class="card">
+      <div class="symbol">🌟</div>
+      <h3>Personal Website</h3>
+      <p>A personal website built with HTML and CSS, enhanced with JavaScript
+      and published online using GitHub Pages.</p>
+      <span class="tag">HTML • CSS • JS</span>
+    </article>
+    <article class="card">
+      <div class="symbol">🔒</div>
+      <h3>Security Learning Lab</h3>
+      <p>A learning project for exploring password safety, encryption
+      concepts and common online security risks in a controlled environment.</p>
+      <span class="tag">LEARNING PROJECT</span>
+    </article>
+    <article class="card">
+      <div class="symbol">⚙️</div>
+      <h3>Automation Experiments</h3>
+      <p>A place for small scripts and tools designed to simplify tasks,
+      organize information and improve productivity.</p>
+      <span class="tag">PROGRAMMING</span>
+    </article>
+  </div>
+  <div class="highlight">
+    Project showcase: These are sample project descriptions, not claims
+    that all the projects have already been completed. Update this section
+    as you build and publish your own work.
+  </div>
+</section>
+
+<section class="alt" id="learn">
+  <div class="tag">KEEP GROWING</div>
+  <h2 class="section-title">Learning <span>Hub</span></h2>
+  <p class="intro">Useful resources to begin learning and strengthen your
+  technical foundation.</p>
+  <div class="grid">
+    <article class="card">
+      <h3>01. Learn HTML</h3>
+      <p>Understand headings, paragraphs, links, images, forms and the
+      structure of web pages.</p>
+      <a class="btn secondary" href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Structuring_content" target="_blank" rel="noopener">Study HTML ↗</a>
+    </article>
+    <article class="card">
+      <h3>02. Learn CSS</h3>
+      <p>Practice colours, spacing, typography, layouts and responsive
+      design for different screen sizes.</p>
+      <a class="btn secondary" href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Styling_basics" target="_blank" rel="noopener">Study CSS ↗</a>
+    </article>
+    <article class="card">
+      <h3>03. Learn JavaScript</h3>
+      <p>Explore variables, functions, events, conditions and interactive
+      features that make websites more useful.</p>
+      <a class="btn secondary" href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Scripting" target="_blank" rel="noopener">Study JavaScript ↗</a>
+    </article>
+    <article class="card">
+      <h3>04. Online Safety</h3>
+      <p>Learn about safer accounts, phishing, software updates and
+      practical ways to protect your devices.</p>
+      <a class="btn secondary" href="https://staysafeonline.org/" target="_blank" rel="noopener">Security Tips ↗</a>
+    </article>
+  </div>
+</section>
+
+<section id="safety">
+  <div class="tag">THINK BEFORE YOU CLICK</div>
+  <h2 class="section-title">Cybersecurity <span>Awareness</span></h2>
+  <p class="intro">Technology is powerful, but safe habits matter.
+  Keep these basic practices in mind whenever you go online.</p>
+  <div class="grid">
+    <article class="card">
+      <h3>🔑 Protect Your Accounts</h3>
+      <p>Use unique passwords and multi-factor authentication. Never share
+      verification codes with strangers.</p>
+    </article>
+    <article class="card">
+      <h3>📥 Check Downloads</h3>
+      <p>Download apps from trusted sources, review requested permissions
+      and keep your operating system updated.</p>
+    </article>
+    <article class="card">
+      <h3>🧠 Use AI Wisely</h3>
+      <p>Verify AI-generated information, protect private data and use
+      automation responsibly.</p>
+    </article>
+  </div>
+</section>
+
+<section class="alt" id="contact">
+  <div class="tag">LET'S CONNECT</div>
+  <h2 class="section-title">Get in <span>Touch</span></h2>
+  <p class="intro">Have a technology idea, a learning suggestion or a
+  project to discuss? You can prepare a message below.</p>
+
+  <form id="contact-form">
+    <label for="visitor-name">Your name</label>
+    <input id="visitor-name" name="name" placeholder="Enter your name" required maxlength="80">
+
+    <label for="visitor-email">Your email (optional)</label>
+    <input id="visitor-email" name="email" type="email" placeholder="you@example.com" maxlength="150">
+
+    <label for="visitor-message">Your message</label>
+    <textarea id="visitor-message" name="message" rows="5"
+      placeholder="Write your message here..." required maxlength="2000"></textarea>
+
+    <button class="btn" type="submit">Prepare Message</button>
+    <p id="form-message" role="status"></p>
+  </form>
+  <p class="intro">Note: This demonstration form does not send or store messages.
+  It prepares a message that you can copy and send yourself.</p>
+</section>
+</main>
+
+<footer>
+  <p><strong>TheRealTechInnovator</strong></p>
+  <p>Think creatively. Code intelligently. Innovate responsibly.</p>
+  <p>© <span id="year"></span> TheRealTechInnovator. Built for learning.</p>
+  <a href="#home" style="color:#f5c542">Back to top ↑</a>
+</footer>
+
+<script>
+document.getElementById("year").textContent = new Date().getFullYear();
+
+document.getElementById("contact-form").addEventListener("submit", function(event) {
+  event.preventDefault();
+
+  const name = document.getElementById("visitor-name").value.trim();
+  const email = document.getElementById("visitor-email").value.trim();
+  const message = document.getElementById("visitor-message").value.trim();
+
+  if (!name || !message) {
+    document.getElementById("form-message").textContent =
+      "Please enter your name and message.";
+    return;
+  }
+
+  const prepared = "Name: " + name +
+    (email ? "\nEmail: " + email : "") +
+    "\nMessage: " + message;
+
+  if (navigator.clipboard && window.isSecureContext) {
+    navigator.clipboard.writeText(prepared).then(function() {
+      document.getElementById("form-message").textContent =
+        "Your message has been copied! You can now paste and send it.";
+    }).catch(function() {
+      window.prompt("Copy your prepared message:", prepared);
+    });
+  } else {
+    window.prompt("Copy your prepared message:", prepared);
+  }
+});
+</script>
 </body>
 </html>
