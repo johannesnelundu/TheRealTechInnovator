@@ -3,378 +3,211 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="TheRealTechInnovator - exploring technology, programming, cybersecurity and innovation.">
-<title>TheRealTechInnovator | Technology & Innovation</title>
-
+<meta name="description" content="TheRealTechInnovator: technology, coding, cybersecurity, AI, networking and digital innovation.">
+<title>TheRealTechInnovator | Technology Knowledge Hub</title>
 <style>
 :root {
-  --gold: #f5c542;
-  --black: #0b0b0f;
-  --panel: #17171e;
-  --white: #f5f5f5;
-  --muted: #b6b6c3;
+  --bg:#090a0e; --panel:#151720; --gold:#f4c542;
+  --white:#f5f6fa; --muted:#b8bdcb; --line:#303443;
 }
-* { box-sizing: border-box; scroll-behavior: smooth; }
-body {
-  margin: 0;
-  background: var(--black);
-  color: var(--white);
-  font-family: Arial, sans-serif;
-  line-height: 1.7;
+*{box-sizing:border-box;scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--white);font:16px/1.8 Arial,sans-serif}
+header{position:sticky;top:0;z-index:10;background:#101116ee;backdrop-filter:blur(12px);border-bottom:1px solid var(--line);padding:14px 5%;display:flex;justify-content:space-between;align-items:center;gap:15px;flex-wrap:wrap}
+.logo{color:var(--gold);font-size:20px;font-weight:bold}
+nav{display:flex;gap:14px;flex-wrap:wrap}
+nav a{color:var(--white);text-decoration:none;font-size:13px}
+nav a:hover{color:var(--gold)}
+.hero{padding:100px 8%;background:radial-gradient(ellipse at 85% 15%,#57400e 0%,#211b14 24%,#090a0e 65%);min-height:480px;display:flex;flex-direction:column;justify-content:center;align-items:flex-start}
+.eyebrow{color:var(--gold);font-size:12px;letter-spacing:3px;font-weight:bold}
+h1{font-size:clamp(38px,7vw,72px);line-height:1.12;margin:15px 0}
+h1 span,h2 span{color:var(--gold)}
+.hero p{max-width:760px;color:var(--muted);font-size:18px}
+.btn{display:inline-block;background:var(--gold);color:#101010;padding:11px 18px;border:1px solid var(--gold);border-radius:6px;text-decoration:none;font-weight:bold;cursor:pointer}
+.btn.alt{background:transparent;color:var(--gold)}
+.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:15px}
+section{padding:65px 7%;scroll-margin-top:90px}
+section:nth-of-type(even){background:#101117}
+h2{font-size:clamp(27px,4vw,38px);line-height:1.3;margin:10px 0}
+h3{color:var(--gold);line-height:1.4}
+.lead{max-width:850px;color:var(--muted);margin-bottom:25px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,250px),1fr));gap:18px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:23px}
+.card p,.card li{color:var(--muted)}
+.card h3{margin-top:5px}
+.icon{font-size:30px}
+.tag{display:inline-block;color:var(--gold);font-size:12px;border:1px solid #65501b;border-radius:20px;padding:3px 10px}
+.notice{border-left:4px solid var(--gold);background:#1a1913;padding:15px 20px;color:var(--muted);margin:25px 0}
+a{overflow-wrap:anywhere}
+.resource{color:var(--gold)}
+.searchbox{width:100%;max-width:500px;background:#0c0d12;border:1px solid var(--line);color:white;padding:13px;border-radius:7px;margin:10px 0 25px;font-size:16px}
+table{width:100%;border-collapse:collapse;margin:20px 0;background:var(--panel)}
+th,td{border:1px solid var(--line);padding:12px;text-align:left;vertical-align:top}
+th{color:var(--gold)}
+footer{padding:35px 7%;text-align:center;color:var(--muted);border-top:1px solid var(--line)}
+footer strong{color:var(--gold)}
+.small{font-size:13px;color:var(--muted)}
+@media(max-width:600px){
+ header{position:static}
+ nav{gap:10px}
+ .hero{padding:65px 6%}
+ section{padding:45px 6%}
+ .card{padding:18px}
 }
-header {
-  background: #111116;
-  border-bottom: 1px solid #39312a;
-  padding: 16px 7%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 12px;
-}
-.logo { color: var(--gold); font-size: 21px; font-weight: bold; }
-nav { display: flex; flex-wrap: wrap; gap: 15px; }
-nav a { color: white; text-decoration: none; font-size: 14px; }
-nav a:hover { color: var(--gold); }
-.hero {
-  min-height: 490px;
-  padding: 90px 8%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  background: radial-gradient(ellipse at top right, #44350e 0%, #17141a 35%, #0b0b0f 75%);
-}
-.tag {
-  color: var(--gold);
-  letter-spacing: 3px;
-  font-size: 12px;
-  font-weight: bold;
-}
-h1 { font-size: clamp(38px, 7vw, 68px); line-height: 1.1; margin: 18px 0; }
-h1 span, h2 span { color: var(--gold); }
-.hero p { color: var(--muted); max-width: 650px; font-size: 18px; }
-.buttons { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 18px; }
-.btn {
-  display: inline-block;
-  padding: 12px 19px;
-  border: 1px solid var(--gold);
-  border-radius: 7px;
-  color: var(--black);
-  background: var(--gold);
-  font-weight: bold;
-  cursor: pointer;
-  text-decoration: none;
-}
-.btn.secondary { background: transparent; color: var(--gold); }
-section { padding: 65px 8%; }
-.section-title { font-size: 30px; margin: 0 0 10px; }
-.intro { color: var(--muted); max-width: 760px; margin-bottom: 28px; }
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 18px;
-}
-.card {
-  background: var(--panel);
-  border: 1px solid #30303a;
-  border-radius: 12px;
-  padding: 23px;
-}
-.card h3 { color: var(--gold); margin-top: 7px; }
-.card p { color: var(--muted); }
-.symbol { font-size: 30px; }
-.alt { background: #111116; }
-ul { color: var(--muted); padding-left: 22px; }
-li { margin: 8px 0; }
-.highlight {
-  border-left: 3px solid var(--gold);
-  padding: 15px 20px;
-  background: #181710;
-  color: var(--muted);
-  margin-top: 24px;
-}
-input, textarea {
-  width: 100%;
-  margin: 7px 0 15px;
-  padding: 13px;
-  background: #101016;
-  color: white;
-  border: 1px solid #41414c;
-  border-radius: 6px;
-  font: inherit;
-}
-label { display: block; color: var(--muted); }
-#form-message { color: var(--gold); }
-footer {
-  text-align: center;
-  padding: 30px 7%;
-  border-top: 1px solid #30303a;
-  color: var(--muted);
-}
-footer strong { color: var(--gold); }
 </style>
 </head>
-
 <body>
 <header>
   <div class="logo">⚡ TheRealTechInnovator</div>
   <nav>
     <a href="#home">Home</a>
     <a href="#about">About</a>
-    <a href="#skills">Interests</a>
+    <a href="#coding">Coding</a>
+    <a href="#security">Cybersecurity</a>
+    <a href="#ai">AI</a>
+    <a href="#networking">Networking</a>
     <a href="#projects">Projects</a>
-    <a href="#learn">Learn</a>
-    <a href="#contact">Contact</a>
+    <a href="#careers">Careers</a>
+    <a href="#resources">Resources</a>
   </nav>
 </header>
 
 <main>
 <section class="hero" id="home">
-  <div class="tag">TECHNOLOGY • CREATIVITY • INNOVATION</div>
+  <div class="eyebrow">KNOWLEDGE • CREATIVITY • INNOVATION</div>
   <h1>Welcome to<br><span>TheRealTechInnovator</span></h1>
   <p>
-    Think creatively. Code intelligently. Innovate responsibly.
-    This is my personal space for exploring technology, developing
-    programming skills, learning cybersecurity and turning ideas into reality.
+    Discover the world of technology, programming, cybersecurity, artificial
+    intelligence and digital innovation. Learn new concepts, explore practical
+    ideas, develop useful skills and turn curiosity into real projects.
   </p>
-  <div class="buttons">
-    <a class="btn" href="#about">Discover My World ↓</a>
-    <a class="btn secondary" href="#projects">Explore Projects</a>
+  <div class="actions">
+    <a class="btn" href="#about">Explore the website ↓</a>
+    <a class="btn alt" href="#projects">Discover projects</a>
   </div>
+  <p class="small">Think creatively. Code intelligently. Innovate responsibly.</p>
 </section>
 
 <section id="about">
-  <div class="tag">MY JOURNEY</div>
-  <h2 class="section-title">About <span>The Innovator</span></h2>
-  <p class="intro">
-    Welcome to my digital space! TheRealTechInnovator represents curiosity,
-    continuous learning, problem-solving and the desire to understand how
-    technology works. I believe every great innovation begins with a question
-    and grows through practice, patience and creativity.
+  <div class="eyebrow">01 / ABOUT THIS PLATFORM</div>
+  <h2>Technology is more than <span>using devices</span></h2>
+  <p class="lead">
+    Technology includes the tools, systems and knowledge people use to solve
+    problems. From websites and mobile applications to computer networks,
+    encryption and AI, technology shapes how we learn, communicate, work
+    and create.
   </p>
   <div class="grid">
-    <article class="card">
-      <div class="symbol">🎯</div>
-      <h3>My Mission</h3>
-      <p>Learn new technologies, develop practical solutions and use technical
-      knowledge to solve meaningful problems.</p>
-    </article>
-    <article class="card">
-      <div class="symbol">💡</div>
-      <h3>My Mindset</h3>
-      <p>Stay curious, experiment responsibly, learn from mistakes and improve
-      one project at a time.</p>
-    </article>
-    <article class="card">
-      <div class="symbol">🚀</div>
-      <h3>My Vision</h3>
-      <p>Build useful digital projects, strengthen my technical skills and
-      contribute positively to the world of technology.</p>
-    </article>
+    <article class="card"><div class="icon">🎯</div><h3>Our mission</h3>
+      <p>Make technology easier to understand, encourage continuous learning,
+      and promote responsible innovation through accessible explanations.</p></article>
+    <article class="card"><div class="icon">💡</div><h3>Our philosophy</h3>
+      <p>Ask questions, understand the fundamentals, practise consistently,
+      test ideas and learn from mistakes instead of giving up.</p></article>
+    <article class="card"><div class="icon">🚀</div><h3>Our vision</h3>
+      <p>Build useful digital solutions, strengthen technical knowledge and
+      encourage more people to participate in the digital world.</p></article>
+    <article class="card"><div class="icon">🌍</div><h3>Technology for everyone</h3>
+      <p>Technical knowledge can help students, entrepreneurs, professionals
+      and communities solve everyday challenges.</p></article>
   </div>
 </section>
 
-<section class="alt" id="skills">
-  <div class="tag">AREAS OF INTEREST</div>
-  <h2 class="section-title">Explore the <span>Tech World</span></h2>
-  <p class="intro">These are important areas I am interested in exploring
-  and developing through learning and practical projects.</p>
+<section id="digital">
+  <div class="eyebrow">02 / DIGITAL FUNDAMENTALS</div>
+  <h2>Understanding the <span>digital world</span></h2>
+  <p class="lead">Start with the foundations before moving to advanced topics.</p>
   <div class="grid">
-    <article class="card">
-      <div class="symbol">💻</div>
-      <h3>Web Development</h3>
-      <p>Learn HTML for structure, CSS for design and JavaScript for
-      interactivity. Build websites that work on phones and computers.</p>
-    </article>
-    <article class="card">
-      <div class="symbol">🛡️</div>
-      <h3>Cybersecurity</h3>
-      <p>Understand online threats, account security, safe browsing,
-      encryption and responsible ways to protect digital systems.</p>
-    </article>
-    <article class="card">
-      <div class="symbol">🐍</div>
-      <h3>Programming</h3>
-      <p>Develop logical thinking, automate repetitive tasks and solve
-      problems using programming languages such as Python and JavaScript.</p>
-    </article>
-    <article class="card">
-      <div class="symbol">🤖</div>
-      <h3>Artificial Intelligence</h3>
-      <p>Explore how AI can support learning, creativity, data analysis
-      and problem-solving while considering privacy and responsible use.</p>
-    </article>
-    <article class="card">
-      <div class="symbol">🌐</div>
-      <h3>Networking</h3>
-      <p>Learn how computers communicate, how IP addresses work and how
-      networks connect people and services around the world.</p>
-    </article>
-    <article class="card">
-      <div class="symbol">🔐</div>
-      <h3>Data Protection</h3>
-      <p>Understand strong passwords, multi-factor authentication,
-      backups, encryption and the importance of keeping information private.</p>
-    </article>
+    <article class="card"><h3>Hardware</h3>
+      <p>Hardware is the physical equipment in a computer system. Examples
+      include the processor (CPU), memory (RAM), storage drives, keyboard,
+      screen and network adapter.</p>
+      <p>The CPU executes instructions. RAM holds data temporarily while
+      programs run. Storage keeps files when power is off.</p></article>
+    <article class="card"><h3>Software</h3>
+      <p>Software is the collection of programs and instructions that tell
+      a computer what to do. Operating systems manage resources, while
+      applications help users perform tasks.</p>
+      <p>Examples include Windows, web browsers, text editors and games.</p></article>
+    <article class="card"><h3>Operating systems</h3>
+      <p>An operating system manages memory, files, processes, devices,
+      accounts and permissions. It provides a platform for applications.</p>
+      <p>Windows, Linux, macOS and Android are examples of operating systems.</p></article>
+    <article class="card"><h3>Data and information</h3>
+      <p>Data consists of recorded facts such as numbers, text, images and
+      measurements. Information is data organised or interpreted to provide
+      meaning and support decisions.</p></article>
+    <article class="card"><h3>Cloud computing</h3>
+      <p>Cloud services provide computing resources over a network. They can
+      include online storage, virtual servers, databases and software.</p>
+      <p>Cloud services are convenient, but account security, access controls,
+      backups and privacy remain important.</p></article>
+    <article class="card"><h3>Databases</h3>
+      <p>A database organises data so it can be stored, retrieved, updated
+      and analysed. Relational databases use tables; other databases support
+      different data structures and access patterns.</p></article>
   </div>
 </section>
 
-<section id="projects">
-  <div class="tag">BUILD • TEST • IMPROVE</div>
-  <h2 class="section-title">My <span>Project Lab</span></h2>
-  <p class="intro">A space to showcase projects as they develop.
-  Replace these examples with your own completed work.</p>
+<section id="coding">
+  <div class="eyebrow">03 / PROGRAMMING AND DEVELOPMENT</div>
+  <h2>Build things with <span>code</span></h2>
+  <p class="lead">Programming means expressing instructions in a form a computer
+  can execute. Different languages and tools are suitable for different tasks.</p>
   <div class="grid">
-    <article class="card">
-      <div class="symbol">🌟</div>
-      <h3>Personal Website</h3>
-      <p>A personal website built with HTML and CSS, enhanced with JavaScript
-      and published online using GitHub Pages.</p>
-      <span class="tag">HTML • CSS • JS</span>
-    </article>
-    <article class="card">
-      <div class="symbol">🔒</div>
-      <h3>Security Learning Lab</h3>
-      <p>A learning project for exploring password safety, encryption
-      concepts and common online security risks in a controlled environment.</p>
-      <span class="tag">LEARNING PROJECT</span>
-    </article>
-    <article class="card">
-      <div class="symbol">⚙️</div>
-      <h3>Automation Experiments</h3>
-      <p>A place for small scripts and tools designed to simplify tasks,
-      organize information and improve productivity.</p>
-      <span class="tag">PROGRAMMING</span>
-    </article>
+    <article class="card"><div class="icon">🌐</div><h3>HTML</h3>
+      <p>HTML defines the structure and meaning of web content. Headings,
+      paragraphs, links, images, forms and navigation are created with HTML.</p>
+      <p>Example: <code>&lt;h1&gt;Hello world&lt;/h1&gt;</code></p></article>
+    <article class="card"><div class="icon">🎨</div><h3>CSS</h3>
+      <p>CSS controls presentation, including colours, spacing, typography,
+      layouts, animation and responsive design.</p>
+      <p>Good CSS helps websites remain usable on both small and large screens.</p></article>
+    <article class="card"><div class="icon">⚙️</div><h3>JavaScript</h3>
+      <p>JavaScript adds behaviour to websites. It can respond to clicks,
+      validate forms, update content and communicate with web services.</p>
+      <p>Example: <code>console.log("Hello world");</code></p></article>
+    <article class="card"><div class="icon">🐍</div><h3>Python</h3>
+      <p>Python is a general-purpose programming language used for automation,
+      data analysis, web backends, education and many scientific tasks.</p>
+      <p>Learn variables, conditions, loops, functions, lists and dictionaries.</p></article>
+    <article class="card"><div class="icon">🧩</div><h3>Algorithms</h3>
+      <p>An algorithm is a sequence of steps for solving a problem. Good
+      algorithms define inputs, outputs, conditions and a clear process.</p>
+      <p>Practise breaking large problems into smaller, manageable tasks.</p></article>
+    <article class="card"><div class="icon">🐞</div><h3>Debugging</h3>
+      <p>Debugging is the process of finding and correcting software errors.
+      Read error messages, reproduce the problem, inspect values and test
+      one change at a time.</p></article>
   </div>
-  <div class="highlight">
-    Project showcase: These are sample project descriptions, not claims
-    that all the projects have already been completed. Update this section
-    as you build and publish your own work.
-  </div>
+  <div class="notice"><strong>Development tip:</strong> Learn the basics first,
+  create small working examples, and gradually combine them into bigger projects.
+  Save versions of your code with Git and use a repository to track changes.</div>
 </section>
 
-<section class="alt" id="learn">
-  <div class="tag">KEEP GROWING</div>
-  <h2 class="section-title">Learning <span>Hub</span></h2>
-  <p class="intro">Useful resources to begin learning and strengthen your
-  technical foundation.</p>
+<section id="security">
+  <div class="eyebrow">04 / CYBERSECURITY</div>
+  <h2>Protect the <span>digital world</span></h2>
+  <p class="lead">Cybersecurity is the practice of protecting devices, accounts,
+  applications, networks and information from unauthorised access, damage or
+  disruption.</p>
   <div class="grid">
-    <article class="card">
-      <h3>01. Learn HTML</h3>
-      <p>Understand headings, paragraphs, links, images, forms and the
-      structure of web pages.</p>
-      <a class="btn secondary" href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Structuring_content" target="_blank" rel="noopener">Study HTML ↗</a>
-    </article>
-    <article class="card">
-      <h3>02. Learn CSS</h3>
-      <p>Practice colours, spacing, typography, layouts and responsive
-      design for different screen sizes.</p>
-      <a class="btn secondary" href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Styling_basics" target="_blank" rel="noopener">Study CSS ↗</a>
-    </article>
-    <article class="card">
-      <h3>03. Learn JavaScript</h3>
-      <p>Explore variables, functions, events, conditions and interactive
-      features that make websites more useful.</p>
-      <a class="btn secondary" href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Scripting" target="_blank" rel="noopener">Study JavaScript ↗</a>
-    </article>
-    <article class="card">
-      <h3>04. Online Safety</h3>
-      <p>Learn about safer accounts, phishing, software updates and
-      practical ways to protect your devices.</p>
-      <a class="btn secondary" href="https://staysafeonline.org/" target="_blank" rel="noopener">Security Tips ↗</a>
-    </article>
-  </div>
-</section>
-
-<section id="safety">
-  <div class="tag">THINK BEFORE YOU CLICK</div>
-  <h2 class="section-title">Cybersecurity <span>Awareness</span></h2>
-  <p class="intro">Technology is powerful, but safe habits matter.
-  Keep these basic practices in mind whenever you go online.</p>
-  <div class="grid">
-    <article class="card">
-      <h3>🔑 Protect Your Accounts</h3>
-      <p>Use unique passwords and multi-factor authentication. Never share
-      verification codes with strangers.</p>
-    </article>
-    <article class="card">
-      <h3>📥 Check Downloads</h3>
-      <p>Download apps from trusted sources, review requested permissions
-      and keep your operating system updated.</p>
-    </article>
-    <article class="card">
-      <h3>🧠 Use AI Wisely</h3>
-      <p>Verify AI-generated information, protect private data and use
-      automation responsibly.</p>
-    </article>
-  </div>
-</section>
-
-<section class="alt" id="contact">
-  <div class="tag">LET'S CONNECT</div>
-  <h2 class="section-title">Get in <span>Touch</span></h2>
-  <p class="intro">Have a technology idea, a learning suggestion or a
-  project to discuss? You can prepare a message below.</p>
-
-  <form id="contact-form">
-    <label for="visitor-name">Your name</label>
-    <input id="visitor-name" name="name" placeholder="Enter your name" required maxlength="80">
-
-    <label for="visitor-email">Your email (optional)</label>
-    <input id="visitor-email" name="email" type="email" placeholder="you@example.com" maxlength="150">
-
-    <label for="visitor-message">Your message</label>
-    <textarea id="visitor-message" name="message" rows="5"
-      placeholder="Write your message here..." required maxlength="2000"></textarea>
-
-    <button class="btn" type="submit">Prepare Message</button>
-    <p id="form-message" role="status"></p>
-  </form>
-  <p class="intro">Note: This demonstration form does not send or store messages.
-  It prepares a message that you can copy and send yourself.</p>
-</section>
-</main>
-
-<footer>
-  <p><strong>TheRealTechInnovator</strong></p>
-  <p>Think creatively. Code intelligently. Innovate responsibly.</p>
-  <p>© <span id="year"></span> TheRealTechInnovator. Built for learning.</p>
-  <a href="#home" style="color:#f5c542">Back to top ↑</a>
-</footer>
-
-<script>
-document.getElementById("year").textContent = new Date().getFullYear();
-
-document.getElementById("contact-form").addEventListener("submit", function(event) {
-  event.preventDefault();
-
-  const name = document.getElementById("visitor-name").value.trim();
-  const email = document.getElementById("visitor-email").value.trim();
-  const message = document.getElementById("visitor-message").value.trim();
-
-  if (!name || !message) {
-    document.getElementById("form-message").textContent =
-      "Please enter your name and message.";
-    return;
-  }
-
-  const prepared = "Name: " + name +
-    (email ? "\nEmail: " + email : "") +
-    "\nMessage: " + message;
-
-  if (navigator.clipboard && window.isSecureContext) {
-    navigator.clipboard.writeText(prepared).then(function() {
-      document.getElementById("form-message").textContent =
-        "Your message has been copied! You can now paste and send it.";
-    }).catch(function() {
-      window.prompt("Copy your prepared message:", prepared);
-    });
-  } else {
-    window.prompt("Copy your prepared message:", prepared);
-  }
-});
-</script>
-</body>
-</html>
+    <article class="card"><div class="icon">🔐</div><h3>Confidentiality</h3>
+      <p>Information should be accessible only to authorised people or systems.
+      Access controls and encryption help protect confidential information.</p></article>
+    <article class="card"><div class="icon">🧾</div><h3>Integrity</h3>
+      <p>Integrity means information remains accurate and is not altered
+      improperly. Hashes, digital signatures, permissions and audit records
+      can help detect or prevent unauthorised changes.</p></article>
+    <article class="card"><div class="icon">⚡</div><h3>Availability</h3>
+      <p>Systems and data should be available when authorised users need them.
+      Backups, maintenance, redundancy and recovery plans support availability.</p></article>
+    <article class="card"><div class="icon">🎣</div><h3>Phishing</h3>
+      <p>Phishing uses deceptive messages or websites to trick people into
+      revealing credentials, paying fraudulent requests or opening dangerous
+      attachments. Check links and verify unusual requests independently.</p></article>
+    <article class="card"><div class="icon">🦠</div><h3>Malware</h3>
+      <p>Malware is malicious software. Examples include ransomware, spyware
+      and trojans. Use trusted downloads, update software, back up important
+      files and avoid unknown attachments.</p></article>
+    <article class="card"><div class="icon">🛡️</div><h3>Defence in depth</h3>
+      <p>Use multiple protective layers: updates, strong authentication
